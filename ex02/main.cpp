@@ -6,7 +6,7 @@
 /*   By: pgeeser <pgeeser@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 19:24:15 by pgeeser           #+#    #+#             */
-/*   Updated: 2023/04/26 17:13:04 by pgeeser          ###   ########.fr       */
+/*   Updated: 2023/04/26 17:33:32 by pgeeser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int main(void)
     std::cout << std::endl;
 
     {
-        int vals = 10;
+        int vals = 400;
         srand(time(NULL));
         Array<int> numbers(vals);
         int* checker = new int[vals];

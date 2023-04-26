@@ -6,7 +6,7 @@
 /*   By: pgeeser <pgeeser@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/10 16:28:34 by pgeeser           #+#    #+#             */
-/*   Updated: 2023/04/26 16:58:04 by pgeeser          ###   ########.fr       */
+/*   Updated: 2023/04/26 17:33:14 by pgeeser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ class Array {
 			if (this != &rhs)
 			{
 				if (this->_array != NULL) {
-					delete [] this->_array;
+					delete[] this->_array;
 					this->_array = NULL;
 				}
 				if (rhs._size != 0)
@@ -62,7 +62,7 @@ class Array {
 
 		T		&operator[](unsigned int index)
 		{
-			if (this->_array == NULL || index >= this->size())
+			if (index >= this->size() || this->_array == NULL)
 				throw Array<T>::IndexOutOfBoundsException();
 			return (this->_array[index]);
 		}
