@@ -6,14 +6,14 @@
 /*   By: pgeeser <pgeeser@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/10 16:12:45 by pgeeser           #+#    #+#             */
-/*   Updated: 2023/04/10 16:22:17 by pgeeser          ###   ########.fr       */
+/*   Updated: 2023/04/25 19:18:28 by pgeeser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef ITER_HPP
 # define ITER_HPP
 
-# include <cstddef>
+# include <cstddef>	// NULL
 
 template <typename T>
 void	iter(T *a, int length, void (*func)(T &))

@@ -6,7 +6,7 @@
 /*   By: pgeeser <pgeeser@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/10 16:28:34 by pgeeser           #+#    #+#             */
-/*   Updated: 2023/04/10 17:46:58 by pgeeser          ###   ########.fr       */
+/*   Updated: 2023/04/25 19:28:48 by pgeeser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define ARRAY_HPP
 
 # include <iostream>
-# include <stddef.h>
+# include <stddef.h>	// NULL
 
 template <typename T>
 class Array {
@@ -44,6 +44,7 @@ class Array {
 			if (this->_array != NULL)
 				delete[] this->_array;
 		}
+
 		Array	&operator=(Array const &rhs)
 		{
 			if (this != &rhs)
@@ -73,7 +74,8 @@ class Array {
 			return (this->_size);
 		}
 	
-		class IndexOutOfBoundsException : public std::exception {
+		class IndexOutOfBoundsException : public std::exception
+		{
 			public:
 				virtual const char *what() const throw();
 		};

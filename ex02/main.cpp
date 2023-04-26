@@ -1,5 +1,19 @@
-#include <iostream>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: pgeeser <pgeeser@student.42heilbronn.de    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/04/25 19:24:15 by pgeeser           #+#    #+#             */
+/*   Updated: 2023/04/25 19:26:29 by pgeeser          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Array.hpp"
+#include <iostream> // std::cout, std::endl
+#include <cstdlib>  // srand, rand
+#include <ctime>    // time
 
 #define MAX_VAL 750
 int main(void)
@@ -86,8 +100,6 @@ int main(void)
         std::cout << numbers[i] << " ";
     }
     std::cout << std::endl;
-
-    // system("leaks array");
 
     return 0;
 }
