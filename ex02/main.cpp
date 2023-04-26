@@ -6,7 +6,7 @@
 /*   By: pgeeser <pgeeser@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 19:24:15 by pgeeser           #+#    #+#             */
-/*   Updated: 2023/04/26 17:10:36 by pgeeser          ###   ########.fr       */
+/*   Updated: 2023/04/26 17:13:04 by pgeeser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ int main(void)
         for (int i = 0; i < vals; i++)
             numbers[i] = checker[i] = rand();
 
-        //Seperate Scope (Testing if asignement or copy influences the original array)
+        //seperate scope (testing if asignement or copy influences the original array)
         {
             std::cout << "Testing Seperate Scope:" << std::endl;
             Array<int> tmp = numbers;
