@@ -6,7 +6,7 @@
 /*   By: pgeeser <pgeeser@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 19:24:15 by pgeeser           #+#    #+#             */
-/*   Updated: 2023/04/26 17:33:32 by pgeeser          ###   ########.fr       */
+/*   Updated: 2023/04/26 17:35:45 by pgeeser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,14 @@ int main(void)
         std::cout << "Elements: " << numbers.size() << std::endl;
         std::cout << "Array: |";
         for (unsigned int i = 0; i < numbers.size(); i++)
-        std::cout << numbers[i] << " ";
+            std::cout << numbers[i] << " ";
         std::cout << "|" << std::endl;
+
+        try {
+            std::cout << numbers[5] << std::endl;
+        } catch(const std::exception& e) {
+            std::cerr << e.what() << " -> correct" << std::endl;
+        }
     }
 
     std::cout << std::endl;
@@ -58,21 +64,15 @@ int main(void)
                 std::cout << "Arrays differ!" << std::endl;
 
         // exception tests
-        try
-        {
+        try {
             numbers[-2] = 0;
-        }
-        catch(const std::exception& e)
-        {
+        } catch(const std::exception& e) {
             std::cerr << e.what() << " -> correct" << std::endl;
         }
 
-        try
-        {
+        try {
             numbers[vals] = 0;
-        }
-        catch(const std::exception& e)
-        {
+        } catch(const std::exception& e) {
             std::cerr << e.what() << " -> correct" << std::endl;
         }
 
