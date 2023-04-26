@@ -6,7 +6,7 @@
 /*   By: pgeeser <pgeeser@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/10 16:28:34 by pgeeser           #+#    #+#             */
-/*   Updated: 2023/04/25 19:28:48 by pgeeser          ###   ########.fr       */
+/*   Updated: 2023/04/26 16:58:04 by pgeeser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,6 @@
 
 template <typename T>
 class Array {
-	private:
-		T					*_array;
-		unsigned int		_size;
-
 	public:
 		Array() : _size(0)
 		{
@@ -49,9 +45,11 @@ class Array {
 		{
 			if (this != &rhs)
 			{
-				if (this->_array != NULL)
+				if (this->_array != NULL) {
 					delete [] this->_array;
-				if (rhs.size() != 0)
+					this->_array = NULL;
+				}
+				if (rhs._size != 0)
 				{
 					this->_size = rhs._size;
 					this->_array = new T[this->_size];
@@ -79,6 +77,10 @@ class Array {
 			public:
 				virtual const char *what() const throw();
 		};
+
+	private:
+		T					*_array;
+		unsigned int		_size;
 };
 
 template <typename T>
